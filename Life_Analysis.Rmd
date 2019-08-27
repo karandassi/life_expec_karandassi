@@ -12,13 +12,36 @@ knitr::opts_chunk$set(echo = TRUE)
 # Abstract
 Here, we examine the cool life expectancy plot.
 
-# Analysis
+# Life expectancy Analysis
 
+## Loading dataset:
 ```{r}
 
+library(gapminder)
+library(tidyverse)
+
+data("gapminder_unfiltered")
+
+head(gapminder_unfiltered)
 
 
 ```
 
+
+## Calculate max life expentancy each year:
+
+```{r}
+
+gapminder_unfiltered %>%
+  group_by(year) %>%
+  filter(lifeExp == max(lifeExp)) %>%
+  select(year, country, lifeExp) %>%
+  arrange(year) ->
+  sumdat
+
+
+
+
+```
 
 
