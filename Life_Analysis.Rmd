@@ -29,6 +29,7 @@ head(gapminder_unfiltered)
 
 
 ## Calculate max life expentancy each year:
+## We are cleaning data for plot creation: 
 
 ```{r}
 
@@ -38,8 +39,6 @@ gapminder_unfiltered %>%
   select(year, country, lifeExp) %>%
   arrange(year) ->
   sumdat
-
-
 
 
 ```
