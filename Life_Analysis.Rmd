@@ -1,0 +1,22 @@
+---
+title: "ExamineLifeExpectancy"
+author: "Karan Dassi"
+date: "8/27/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Abstract
+Here, we examine the cool life expectancy plot.
+
+# Analysis
+
+```{r}
+
+
+
+```
+
