@@ -52,5 +52,5 @@ sumdat %>%
     ggplot(aes(x = year, y = lifeExp, color = country)) + 
     geom_point() + 
     geom_smooth(aes(group = 1), method = "lm", formula = y~x, se = F) + 
-    geom_point(pch = 1)
+    geom_point(pch = 2)
 ```
