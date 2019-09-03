@@ -44,3 +44,11 @@ gapminder_unfiltered %>%
 ```
 
 
+We will now create the plot from oeppen and Vaupel (2002).
+
+```{r}
+
+
+
+```
+
