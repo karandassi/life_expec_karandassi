@@ -32,23 +32,25 @@ head(gapminder_unfiltered)
 ## We are cleaning data for plot creation: 
 
 ```{r}
-
 gapminder_unfiltered %>%
   group_by(year) %>%
   filter(lifeExp == max(lifeExp)) %>%
   select(year, country, lifeExp) %>%
   arrange(year) ->
   sumdat
-
-
 ```
 
 
 We will now create the plot from oeppen and Vaupel (2002).
 
 ```{r}
-
-
-
+sumdat
 ```
 
+```{r}
+sumdat %>%
+    ggplot(aes(x = year, y = lifeExp, color = country)) + 
+    geom_point() + 
+    geom_smooth(aes(group = 1), method = "lm", formula = y~x, se = F) + 
+    geom_point(pch = 2)
+```
